@@ -16,8 +16,8 @@
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #009CD7;
+  --red: #f2a900;
+  --orange: #f2a900;
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
@@ -25,7 +25,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #009CD7;
+  --primary: #f2a900;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -2720,13 +2720,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #009CD7;
+  background-color: #022169;
   border-color: #009CD7;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #017ca8;
+  background-color: #063187;
   border-color: #017ca8;
 }
 
@@ -4503,7 +4503,7 @@ input[type=button].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #F2A900;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -5272,7 +5272,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #009CD7;
+  color: #F2A900;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
@@ -5305,8 +5305,8 @@ input[type=button].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #009CD7;
-  border-color: #009CD7;
+  background-color: #f2a900;
+  border-color: #f2a900;
 }
 
 .page-item.disabled .page-link {
@@ -5390,7 +5390,7 @@ a.badge:focus {
 
 .badge-primary {
   color: #fff;
-  background-color: #009CD7;
+  background-color: #f2a900;
 }
 
 a.badge-primary:hover,
@@ -5721,7 +5721,7 @@ a.badge-dark.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #009CD7;
+  background-color: #f2a900;
   transition: width 0.6s ease;
 }
 
@@ -5812,8 +5812,8 @@ a.badge-dark.focus {
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #009CD7;
-  border-color: #009CD7;
+  background-color: #f2a900;
+  border-color: #f2a900;
 }
 
 .list-group-item+.list-group-item {
@@ -7003,7 +7003,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #009CD7 !important;
+  background-color: #022169 !important;
 }
 
 a.bg-primary:hover,
@@ -7095,7 +7095,7 @@ button.bg-dark:focus {
 }
 
 .bg-red {
-  background-color: #DA3732 !important;
+  background-color: #022169 !important;
 }
 
 .bg-transparent {
@@ -7143,7 +7143,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #009CD7 !important;
+  border-color: #f2a900 !important;
 }
 
 .border-secondary {
@@ -10741,7 +10741,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #009CD7 !important;
+  color: #f2a900 !important;
 }
 
 a.text-primary:hover,
@@ -10786,12 +10786,12 @@ a.text-warning:focus {
 }
 
 .text-danger {
-  color: #DA3732 !important;
+  color: #f2a900 !important;
 }
 
 a.text-danger:hover,
 a.text-danger:focus {
-  color: #a71d2a !important;
+  color: #f2a900 !important;
 }
 
 .text-light {
@@ -10968,11 +10968,11 @@ html {
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: #009CD7;
+  border-color: #f2a900;
 }
 
 hr.divider-red {
-  border-color: #DA3732 !important;
+  border-color: #F2A900 !important;
 }
 
 hr.light {
@@ -11018,11 +11018,11 @@ hr.light {
 
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #009CD7;
+  color: #f2a900;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #009CD7 !important;
+  color: #f2a900 !important;
 }
 
 @media (min-width: 992px) {
@@ -11062,7 +11062,7 @@ hr.light {
   }
 
   #mainNav.navbar-scrolled .navbar-brand:hover {
-    color: #009CD7;
+    color: #f2a900;
   }
 
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
@@ -11070,7 +11070,7 @@ hr.light {
   }
 
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
-    color: #009CD7;
+    color: #f2a900;
   }
 }
 
@@ -11078,7 +11078,7 @@ header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(85, 81, 81, 0.8) 0%, rgba(85, 81, 81, 0.8) 100%),
-    url("../assets/img/bg-masthead.jpg");
+    url("../assets/img/bg-masthead.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
