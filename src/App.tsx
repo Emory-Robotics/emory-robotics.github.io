@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import About from './pages/about/About';
@@ -9,7 +9,7 @@ import Sponsors from './pages/sponsors/Sponsors';
 
 function App() {
 	return (
-		<BrowserRouter>
+		<HashRouter>
 			<div className="w-screen h-screen flex flex-col items-center justify-center">
 			<div className="max-w-5xl w-full h-full p-8 box-border">
 				<Navbar />
@@ -22,7 +22,7 @@ function App() {
 				</Routes>
 			</div>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
