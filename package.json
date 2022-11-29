@@ -1,7 +1,7 @@
 {
   "name": "emory-robotics.github.io",
   "version": "0.1.0",
-  "homepage": "http://emory-robotics.github.io"
+  "homepage": "http://emory-robotics.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
