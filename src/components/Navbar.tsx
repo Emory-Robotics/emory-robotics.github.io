@@ -3,7 +3,11 @@ import "./Navbar.css"
 
 function Navlink(props: { name: string, url: string, className?: string }): JSX.Element {
 	const navigate = useNavigate();
-	let isActive = window.location.pathname.toString() === props.url;
+	let isActive = window.location.hash.toString() === `#${props.url}`;
+
+	if (props.url === "/" && window.location.hash.toString() === "") {
+		isActive = true;
+	}
 
 	return (
 		<span className={`text-sm sm:text-lg text-left link link-underline link-underline-black text-black ${isActive ? "link-underline-active" : ""} ${props.className}`} onClick={() => {
