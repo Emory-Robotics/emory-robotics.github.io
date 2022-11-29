@@ -74,19 +74,24 @@ export default function Sponsors(): JSX.Element {
 				<SponsorSection name="Supporter" sponsors={supporter} setShowModal={setShowModal} />
 
 			</div>
-				<div className={`${showModal ? "translate-y-1/3" : "-translate-y-full"} w-1/2 h-1/3 fixed inset-0 bg-white  translate-x-1/2 drop-shadow-lg p-5 flex flex-col transition-all ease-in-out duration-200`}>
-					<div className="w-full flex flex-row justify-between">
-						<h1 className="text-lg">Sponsoring Emory Robotics</h1>
-						<button className="hover:bg-gray-100 rounded-full" onClick={() => setShowModal(false)}>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-								<path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-							</svg>
-						</button>
-					</div>
+			<div className={`${showModal ? "translate-y-1/3" : "-translate-y-full"} w-2/3 h-1/2 fixed inset-0 bg-white  translate-x-1/3 drop-shadow-lg p-5 flex flex-col transition-all ease-in-out duration-200`}>
+				<div className="w-full flex flex-row justify-between">
+					<h1 className="text-lg">Sponsoring Emory Robotics</h1>
+					<button className="hover:bg-gray-100 rounded-full" onClick={() => setShowModal(false)}>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+							<path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div className="p-5 overflow-scroll">
 					<p>
-						Contact us at emory.robotics@gmail.com
+						Contact us at <a href="mailto:robotics.emory@gmail.com" className="underline text-[#07478D]">robotics.emory@gmail.com</a> to learn more about how you can support us!
+					</p>
+					<p>
+						We thank you for your support!
 					</p>
 				</div>
+			</div>
 		</div>
 	);
 }

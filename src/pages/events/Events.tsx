@@ -92,21 +92,32 @@ function Event(event: EventI): JSX.Element {
 				<div className="h-full flex flex-col justify-between">
 					<text className="text-sm">{event.description}</text>
 					<div className="flex flex-row space-x-2 my-2">
+						{event.slides ?
+							<a
+								rel="noreferrer"
+								href={event.slides}
+								target="_blank"
+								className={`bg-yellow-400 cursor-pointer hover:bg-yellow-300 transition duration-300 ease px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
+								Slides
+							</a> :
+							<span
+								className={`bg-yellow-400 opacity-60 cursor-default px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
+								Slides
+							</span>}
+						{event.video ? 
 						<a
 							rel="noreferrer"
-							href={event.slides || "#"}
+							href={event.video}
 							target="_blank"
-							className={`${event.slides ? "bg-yellow-400 cursor-pointer hover:bg-yellow-300 transition duration-300 ease" : "bg-yellow-400 opacity-60 cursor-default"} px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
-							Slides
-						</a>
-
-						<a
-							rel="noreferrer"
-							href={event.video || "#"}
-							target="_blank"
-							className={`${event.video ? "bg-red-400 cursor-pointer hover:bg-red-300 transition duration-300 ease" : "bg-red-400 opacity-60 cursor-default"} px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
+							className={`bg-red-400 cursor-pointer hover:bg-red-300 transition duration-300 ease px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
 							Video
-						</a>
+						</a> :
+						<span
+							className={`bg-red-400 opacity-60 cursor-default px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
+							Video
+						</span>}
+
+
 					</div>
 				</div>
 			</div>

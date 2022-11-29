@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css"
 
-function Navlink(props: { name: string, url: string }): JSX.Element {
+function Navlink(props: { name: string, url: string, className?: string }): JSX.Element {
 	const navigate = useNavigate();
-	let isActive = window.location.pathname.toString() ===  props.url;
+	let isActive = window.location.pathname.toString() === props.url;
 
 	return (
-		<span className={`text-left link link-underline link-underline-black text-black ${isActive ? "link-underline-active" : ""}`} onClick={() => {
+		<span className={`text-sm sm:text-lg text-left link link-underline link-underline-black text-black ${isActive ? "link-underline-active" : ""} ${props.className}`} onClick={() => {
 			navigate(props.url);
 		}}>{props.name}</span>
 	);
@@ -20,7 +20,9 @@ export default function Navbar(): JSX.Element {
 				<Navlink name="Emory Robotics Club" url="/" />
 			</div>
 
+
 			<div className="flex flex-row space-x-4">
+				<Navlink name="ERC" url="/" className="sm:hidden" />
 				<Navlink name="Sponsors" url="/sponsors" />
 				<Navlink name="About" url="/about" />
 				<Navlink name="Events" url="/events" />
