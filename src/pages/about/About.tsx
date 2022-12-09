@@ -19,7 +19,7 @@ function Engineering(props: any): JSX.Element {
 				</div>
 
 			</div>
-			<text>Mechanical Engineering</text>
+			<text className="text-center">Mechanical Engineering</text>
 		</div>
 	);
 }
@@ -44,7 +44,7 @@ function ComputerScience(props: any): JSX.Element {
 				</div>
 
 			</div>
-			<text>Computer Science</text>
+			<text className="text-center">Computer Science</text>
 		</div>
 	);
 }
@@ -67,7 +67,7 @@ function ElectricalEngineering(props: any): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<text>Electrical Engineering</text>
+			<text className="text-center">Electrical Engineering</text>
 		</div>
 	);
 }
@@ -91,7 +91,7 @@ function Marketing(props: any): JSX.Element {
 					</div>
 				</div>
 			</div>
-			<text>Marketing</text>
+			<text className="text-center">Marketing</text>
 		</div>
 	);
 }
@@ -106,7 +106,7 @@ export default function About(): JSX.Element {
 	}
 
 	return (
-		<div className="w-11/12 my-5 mx-10 grid grid-cols-1 divide-y space-y-7">
+		<div className="px-10 mt-10 pb-5 box-border mx-0 divide-y space-y-7">
 			<div className="flex flex-col">
 				<text className="text text-2xl text-w-bold w-4/5 my-2">Our Mission</text>
 				<text className="text text-md w-4/5">
@@ -117,10 +117,10 @@ export default function About(): JSX.Element {
 				</text>
 			</div>
 
-			<div>
+			<div className="">
 				<text className="text text-2xl text-w-bold w-4/5 my-2">How to Get Involved</text>
 				<div className="flex justify-center mt-10">
-					<div className="grid grid-cols-2 grid-rows-2 gap-y-5 gap-x-32">
+					<div className="grid grid-cols-2 grid-rows-2 gap-y-5 gap-x-0 sm:gap-x-32">
 						<Engineering {...props} />
 						<ComputerScience {...props} />
 						<ElectricalEngineering {...props} />
@@ -133,7 +133,6 @@ export default function About(): JSX.Element {
 						<text className="text-slate-600">and more...</text>
 					</div>
 					<a
-						rel="noreferrer"
 						target="_blank"
 						className="px-6 py-3 text-[#3279d0] no-underline bg-white rounded hover:bg-blue-700 hover:underline hover:text-white border-2 border-[#3279d0]"
 						href="https://docs.google.com/forms/d/e/1FAIpQLSfD3ExCFY45tcjreeLHKbYYa00kFnR3dn45jy_9V-8VMF6TKw/viewform">

@@ -80,7 +80,7 @@ interface EventI {
 
 function Event(event: EventI): JSX.Element {
 	return (
-		<div className="flex flex-col rounded w-72 h-96 divide-y drop-shadow-lg">
+		<div className="self-center justify-self-center flex flex-col rounded w-72 h-96 divide-y drop-shadow-lg">
 			<div className="w-full h-1/2">
 				<Carousel images={event.images} />
 			</div>
@@ -104,18 +104,18 @@ function Event(event: EventI): JSX.Element {
 								className={`bg-yellow-400 opacity-60 cursor-default px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
 								Slides
 							</span>}
-						{event.video ? 
-						<a
-							rel="noreferrer"
-							href={event.video}
-							target="_blank"
-							className={`bg-red-400 cursor-pointer hover:bg-red-300 transition duration-300 ease px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
-							Video
-						</a> :
-						<span
-							className={`bg-red-400 opacity-60 cursor-default px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
-							Video
-						</span>}
+						{event.video ?
+							<a
+								rel="noreferrer"
+								href={event.video}
+								target="_blank"
+								className={`bg-red-400 cursor-pointer hover:bg-red-300 transition duration-300 ease px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
+								Video
+							</a> :
+							<span
+								className={`bg-red-400 opacity-60 cursor-default px-4 py-2 rounded-full text-white text-sm flex align-center w-max`}>
+								Video
+							</span>}
 
 
 					</div>
@@ -134,15 +134,15 @@ export default function Events(): JSX.Element {
 			description: "Students built cars using an Arduino kit to race on a custom track using satallite imagery of Emory University's campus.",
 			images: [
 				{
-					src: "assets/swoop-race.jpg",
+					src: "assets/swoop-race/swoop-race.jpg",
 					alt: "Arduino kit",
 				},
 				{
-					src: "assets/swoop-race-2.jpeg",
+					src: "assets/swoop-race/swoop-race-2.jpeg",
 					alt: "",
 				},
 				{
-					src: "assets/swoop-race-3.jpg",
+					src: "assets/swoop-race/swoop-race-3.jpg",
 					alt: "",
 				}]
 		},
@@ -154,7 +154,7 @@ export default function Events(): JSX.Element {
 			video: "https://www.youtube.com/watch?v=YDJjPUMZS5U",
 			images: [
 				{
-					src: "assets/sensor-workshop.jpg",
+					src: "assets/11.11.21/sensor-workshop.jpg",
 					alt: "Workshop Video Thumbnail"
 				}
 			]
@@ -166,7 +166,7 @@ export default function Events(): JSX.Element {
 			video: "https://www.youtube.com/watch?v=Djtar6LRp7E",
 			images: [
 				{
-					src: "assets/programming-workshop.jpg",
+					src: "assets/11.18.21/programming-workshop.jpg",
 					alt: "Workshop Video Thumbnail"
 				}
 			]
@@ -178,7 +178,7 @@ export default function Events(): JSX.Element {
 			slides: "https://docs.google.com/presentation/d/1DWSMuy0VhVWWPjhw-J53lfKMpmzAVTEx6k6goOS5Hts/edit?usp=sharing",
 			images: [
 				{
-					src: "assets/pid-flyer.png",
+					src: "assets/10.30.22/pid-flyer.png",
 					alt: "Workshop Flyer"
 				}
 			]
@@ -191,7 +191,7 @@ export default function Events(): JSX.Element {
 			video: "https://www.youtube.com/watch?v=j8n2ruJG0OE",
 			images: [
 				{
-					src: "assets/motor-workshop.jpg",
+					src: "assets/11.4.21/motor-workshop.jpg",
 					alt: "Workshop Video Thumbnail"
 				}
 			]
@@ -203,17 +203,52 @@ export default function Events(): JSX.Element {
 			slides: "https://docs.google.com/presentation/d/1iEVy597eIYZK-t0F8k9gLB47739Qty1Qgnd0B6r4x04/edit?usp=sharing",
 			images: [
 				{
-					src: "assets/intro-arduino-flyer.png",
+					src: "assets/9.7.21/intro-arduino-flyer.png",
 					alt: "Workshop Flyer"
 				}
+			]
+		},
+		{
+			title: "Custom LED's Workshop",
+			date: new Date("12/9/2022"),
+			description: "Custom LED's Workshop - students learned how to use arduinos to interact with LED's through wiring and programming to create custom designs/animations.",
+			slides: "https://docs.google.com/presentation/d/1bi8a_eflZyoYb1ITKGEyhE6pvjTAlJOUPfuydBoovLk/edit?usp=sharing",
+			images: [
+				{
+					src: "assets/12.6.22/flyer.png",
+					alt: "Workshop Flyer"
+				},
+				{
+					src: "assets/12.6.22/LED1.jpg",
+					alt: "Workshop event"
+				},
+				{
+					src: "assets/12.6.22/LED2.jpg",
+					alt: "Workshop event"
+				},
+				{
+					src: "assets/12.6.22/LED3.jpg",
+					alt: "Workshop event"
+				},
+				{
+					src: "assets/12.6.22/LED4.jpg",
+					alt: "Workshop event"
+				},
+				{
+					src: "assets/12.6.22/LED5.jpg",
+					alt: "Workshop event"
+				},
+				{
+					src: "assets/12.6.22/LED6.jpg",
+					alt: "Workshop event"
+				},
 			]
 		},
 	]
 
 	return (
-		<div className="w-11/12 my-5 mx-auto grid md:grid-cols-3 grid-cols-1 gap-x-10 gap-y-10">
+		<div className="w-11/12 my-5 mx-auto grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-x-10 gap-y-10">
 			{events.sort((a, b) => b.date.getTime() - a.date.getTime()).map((event: EventI, idx: number) => <Event {...event} key={idx} />)}
 		</div>
-
 	);
 }
