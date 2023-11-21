@@ -244,6 +244,26 @@ export default function Events(): JSX.Element {
 				},
 			]
 		},
+		{
+			title: "Humaniod Robotics Challenge",
+			date: new Date("1/20/2023"),
+			description: "Built a robotic dog, Hades, from scratch following a tutorial for the Humaniod Robotics Challenge hosted by Georgia Tech.",
+			slides: "https://docs.google.com/presentation/d/1bi8a_eflZyoYb1ITKGEyhE6pvjTAlJOUPfuydBoovLk/edit?usp=sharing",
+			images: [
+				{
+					src: "assets/1.20.23/1.png",
+					alt: "Hades robotic dog"
+				},
+				{
+					src: "assets/1.20.23/2.png",
+					alt: "Hades robotic dog"
+				},
+				{
+					src: "assets/1.20.23/3.png",
+					alt: "Hades robotic dog"
+				},
+			]
+		},
 	]
 
 	return (

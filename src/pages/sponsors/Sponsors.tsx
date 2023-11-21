@@ -26,7 +26,7 @@ function SponsorSection(props: { name: string, sponsors: SponsorI[], setShowModa
 		<div className="m-1">
 			<text className="text-xl">{props.name}</text>
 			<hr className="mb-2 w-11/12" />
-			<div className="flex flex-row">
+			<div className="flex flex-row gap-8">
 				{props.sponsors.length === 0 &&
 					<div className="flex justify-center">
 						<span className="text-gray-500 hover:underline text-sm" onClick={() => props.setShowModal(true)}>Become an Emory Robotics Sponsor</span>
@@ -50,7 +50,18 @@ interface SponsorI {
 
 export default function Sponsors(): JSX.Element {
 
-	const champion: SponsorI[] = [];
+	const champion: SponsorI[] = [
+		{
+			name: "Emory Student Government Association",
+			level: SponsorLevel.Champion,
+			picture: "https://se-images.campuslabs.com/clink/images/efa5a82a-37d5-4653-ade5-0d88dab10b9e0c366924-6fb4-4369-9308-7e251dd73bcb.png?preset=med-sq",
+		},
+		{
+			name: "Emory College Council",
+			level: SponsorLevel.Champion,
+			picture: "https://se-images.campuslabs.com/clink/images/bc3945b7-4464-4609-a066-1e953c676d5ae50963fd-1980-4776-97a7-2f7b0695be32.png?preset=med-sq",
+		}
+	];
 	const eagle: SponsorI[] = [];
 	const gold: SponsorI[] = [
 		{
